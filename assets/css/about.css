@@ -1,0 +1,1250 @@
+/* About Page Specific Styles */
+
+/* Hero Compact Variant */
+.hero--compact {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.hero--compact .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero--compact .hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Vision Timeline */
+.vision-timeline {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vision-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 2;
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border: 4px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-content {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    margin: 0 2rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.timeline-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Technology Philosophy */
+.philosophy-section {
+    background: linear-gradient(135deg, var(--color-neural-dark), var(--color-bio-dark));
+    position: relative;
+    overflow: hidden;
+}
+
+.philosophy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(0, 255, 157, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: var(--space-xxl);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.philosophy-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-lg);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-neural-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.philosophy-content .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-xxl);
+    color: var(--text-secondary);
+}
+
+.philosophy-principles {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.principle {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.principle:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 32px rgba(0, 255, 157, 0.2);
+}
+
+.principle h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.principle p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Tech Diagram */
+.tech-diagram-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.tech-diagram {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diagram-node {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid transparent;
+}
+
+.diagram-node:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.diagram-node span {
+    z-index: 2;
+    position: relative;
+}
+
+.diagram-node--primary {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-neural-light));
+    color: var(--color-neural-dark);
+    box-shadow: 0 8px 32px rgba(0, 255, 157, 0.3);
+}
+
+.diagram-node--secondary {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, var(--color-bio-light), var(--color-quantum-light));
+    color: var(--color-neural-dark);
+    box-shadow: 0 8px 32px rgba(157, 255, 0, 0.3);
+}
+
+.diagram-node--tertiary {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--color-quantum-light), var(--color-bio-light));
+    color: var(--color-neural-dark);
+    box-shadow: 0 8px 32px rgba(255, 157, 0, 0.3);
+}
+
+.diagram-node--quaternary {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, var(--color-neural-light), var(--color-primary));
+    color: var(--color-neural-dark);
+    box-shadow: 0 8px 32px rgba(0, 157, 255, 0.3);
+}
+
+.diagram-connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.diagram-connections::before,
+.diagram-connections::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, var(--color-primary), transparent, var(--color-bio-light));
+    height: 2px;
+}
+
+.diagram-connections::before {
+    top: 50%;
+    left: 80px;
+    right: 80px;
+    transform: translateY(-50%);
+}
+
+.diagram-connections::after {
+    left: 50%;
+    top: 80px;
+    bottom: 80px;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(0deg, var(--color-quantum-light), transparent, var(--color-neural-light));
+}
+
+/* Team Areas - Professional Design */
+.team-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.team-area {
+    background: var(--color-neural-dark);
+    border: 1px solid var(--color-neural-light);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.team-area:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.team-area h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.team-area h3::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background: var(--color-accent-primary);
+    border-radius: 2px;
+}
+
+.team-area p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.team-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.specialty-tag {
+    background: var(--color-neural-medium);
+    color: var(--text-primary);
+    border: 1px solid var(--color-neural-light);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.specialty-tag:hover {
+    background: var(--color-accent-primary);
+    color: var(--color-neural-dark);
+    border-color: var(--color-accent-primary);
+}
+
+/* Research Stats */
+.research-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--background-light) 0%, white 100%);
+    border-radius: 16px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Research Areas - Professional Design */
+.research-areas {
+    margin-top: 3rem;
+}
+
+.research-areas h3 {
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.research-card {
+    background: var(--color-neural-dark);
+    border: 1px solid var(--color-neural-light);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.research-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.research-card--priority {
+    border-left: 3px solid var(--color-accent-primary);
+}
+
+.research-card--breakthrough {
+    border-left: 3px solid var(--color-quantum-light);
+}
+
+.research-card--experimental {
+    border-left: 3px solid var(--color-bio-light);
+}
+
+.research-card--visionary {
+    border-left: 3px solid var(--color-neural-light);
+}
+
+.research-card--innovation {
+    border-left: 3px solid var(--color-primary);
+}
+
+.research-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--color-neural-medium);
+    border: 1px solid var(--color-neural-light);
+    border-radius: 8px;
+    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+    color: var(--color-accent-primary);
+    font-weight: 500;
+}
+
+.research-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--space-md) 0;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+}
+
+.status-active {
+    background: rgba(0, 150, 255, 0.1);
+    color: var(--color-accent-primary);
+    border-color: rgba(0, 150, 255, 0.2);
+}
+
+.status-breakthrough {
+    background: rgba(100, 200, 255, 0.1);
+    color: var(--color-quantum-light);
+    border-color: rgba(100, 200, 255, 0.2);
+}
+
+.status-experimental {
+    background: rgba(150, 255, 100, 0.1);
+    color: var(--color-bio-light);
+    border-color: rgba(150, 255, 100, 0.2);
+}
+
+.status-visionary {
+    background: rgba(138, 43, 226, 0.2);
+    color: #8a2be2;
+}
+
+.status-innovation {
+    background: rgba(0, 191, 255, 0.2);
+    color: #00bfff;
+}
+
+.progress-indicator {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.research-goals {
+    margin-top: var(--space-md);
+}
+
+.goal {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-xs);
+    padding-left: var(--space-sm);
+}
+
+/* Core Technologies Section */
+.tech-stack-card {
+    background: var(--color-neural-dark);
+    border: 1px solid var(--color-neural-light);
+    border-radius: 12px;
+    padding: var(--space-xl);
+    margin-bottom: var(--space-lg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-stack-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary));
+}
+
+.tech-stack-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 10px 30px rgba(0, 150, 255, 0.2);
+}
+
+.tech-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--color-neural-medium);
+    border: 2px solid var(--color-neural-light);
+    border-radius: 8px;
+    margin-bottom: var(--space-md);
+    font-size: 1.75rem;
+    color: var(--color-accent-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tech-stack-card:hover .tech-icon {
+    background: var(--color-accent-primary);
+    color: var(--color-neural-dark);
+    border-color: var(--color-accent-primary);
+    transform: scale(1.05);
+}
+
+.tech-stack-card h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.tech-stack-card p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+}
+
+.tech-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.feature-tag {
+    background: var(--color-neural-medium);
+    color: var(--text-primary);
+    border: 1px solid var(--color-neural-light);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.feature-tag:hover {
+    background: var(--color-accent-primary);
+    color: var(--color-neural-dark);
+    border-color: var(--color-accent-primary);
+}
+
+.tech-metrics {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-accent-primary);
+    line-height: 1;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: var(--space-xs);
+}
+
+/* Integration Diagram */
+.tech-integration {
+    margin-top: var(--space-xxl);
+    text-align: center;
+}
+
+.tech-integration h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--space-xl);
+    font-size: 1.8rem;
+}
+
+.integration-diagram {
+    background: var(--color-neural-medium);
+    border-radius: 12px;
+    padding: var(--space-xl);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.layer {
+    background: var(--color-neural-dark);
+    border: 1px solid var(--color-neural-light);
+    border-radius: 8px;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+    transition: all 0.3s ease;
+}
+
+.layer:hover {
+    border-color: var(--color-accent-primary);
+    background: var(--color-neural-medium);
+}
+
+.layer-label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-accent-primary);
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+}
+
+.layer-tech {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Research Collaboration */
+.research-collaboration {
+    margin-top: var(--space-xxl);
+    background: var(--color-neural-medium);
+    border-radius: 12px;
+    padding: var(--space-xl);
+}
+
+.research-collaboration h4 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    font-size: 1.6rem;
+}
+
+.collaboration-network {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+}
+
+.partner-category h5 {
+    color: var(--color-accent-primary);
+    margin-bottom: var(--space-md);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.partner-tag {
+    background: var(--color-neural-dark);
+    color: var(--text-secondary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: 1px solid var(--color-neural-light);
+    transition: all 0.3s ease;
+}
+
+.partner-tag:hover {
+    border-color: var(--color-accent-primary);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* Join the Revolution Section - Professional Design */
+.section--primary {
+    background: linear-gradient(135deg, var(--color-neural-dark) 0%, var(--color-neural-medium) 100%);
+    border-top: 1px solid var(--color-neural-light);
+    border-bottom: 1px solid var(--color-neural-light);
+    position: relative;
+}
+
+.section--primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent-primary), var(--color-quantum-light), var(--color-bio-light));
+}
+
+.section--primary .section-header h2 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.section--primary .section-description {
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto var(--space-xxl);
+    line-height: 1.6;
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.community-item {
+    background: var(--color-neural-dark);
+    border: 1px solid var(--color-neural-light);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.community-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-accent-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.community-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.community-item:hover::before {
+    opacity: 1;
+}
+
+.community-item h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.community-item h3::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent-primary);
+    border-radius: 50%;
+}
+
+.community-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.community-item .btn {
+    background: transparent;
+    border: 2px solid var(--color-accent-primary);
+    color: var(--color-accent-primary);
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.community-item .btn:hover {
+    background: var(--color-accent-primary);
+    color: var(--color-neural-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 150, 255, 0.3);
+}
+
+/* Enhanced Vision Section */
+.vision-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.pillar-card {
+    background: var(--color-neural-dark);
+    border: 1px solid var(--color-neural-light);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent-primary), var(--color-quantum-light));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.pillar-card:hover::before {
+    opacity: 1;
+}
+
+.pillar-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--color-neural-medium);
+    border: 2px solid var(--color-neural-light);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.pillar-card:hover .pillar-icon {
+    background: var(--color-accent-primary);
+    border-color: var(--color-accent-primary);
+    transform: scale(1.1);
+}
+
+.pillar-card h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.pillar-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.pillar-metric {
+    border-top: 1px solid var(--color-neural-light);
+    padding-top: 1.5rem;
+}
+
+.metric-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accent-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.vision-roadmap {
+    margin-top: 4rem;
+}
+
+.vision-roadmap h3 {
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.timeline-goals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.goal-tag {
+    background: var(--color-neural-medium);
+    color: var(--text-primary);
+    border: 1px solid var(--color-neural-light);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.goal-tag:hover {
+    background: var(--color-accent-primary);
+    color: var(--color-neural-dark);
+    border-color: var(--color-accent-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero--compact .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero--compact .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .vision-timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding-left: 60px;
+    }
+    
+    .timeline-marker {
+        position: absolute;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 0.7rem;
+    }
+    
+    .timeline-content {
+        margin: 1rem 0 0 0;
+        width: 100%;
+    }
+    
+    .tech-diagram {
+        height: 300px;
+        padding: 1rem;
+    }
+    
+    .diagram-node {
+        width: 80px;
+        height: 80px;
+        font-size: 0.7rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .team-areas,
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .research-stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 1rem;
+    }
+    
+    /* Core Technologies Responsive */
+    .tech-stack-card {
+        padding: var(--space-lg);
+        margin-bottom: var(--space-md);
+    }
+    
+    .tech-icon {
+        font-size: 2.5rem;
+    }
+    
+    .tech-metrics {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+    
+    .integration-diagram {
+        padding: var(--space-lg);
+    }
+    
+    .layer {
+        padding: var(--space-md);
+    }
+    
+    .layer-label {
+        font-size: 1rem;
+    }
+    
+    .layer-tech {
+        font-size: 0.85rem;
+    }
+    
+    /* Research Areas Responsive */
+    .research-icon {
+        font-size: 2rem;
+    }
+    
+    .research-status {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
+    }
+    
+    .collaboration-network {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .partner-list {
+        justify-content: center;
+    }
+    
+    .research-collaboration {
+        padding: var(--space-lg);
+    }
+}
+
+/* Mobile Responsive Improvements for Professional Design */
+@media (max-width: 768px) {
+    .community-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .community-item {
+        padding: 1.5rem;
+    }
+    
+    .community-item h3 {
+        font-size: 1.3rem;
+    }
+    
+    .section--primary .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .section--primary .section-description {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .research-icon,
+    .tech-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.5rem;
+    }
+    
+    .research-card,
+    .tech-stack-card,
+    .team-area {
+        padding: 1.5rem;
+    }
+    
+    .tech-features {
+        justify-content: center;
+    }
+    
+    .feature-tag,
+    .specialty-tag {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+    
+    .status-badge {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero--compact {
+        padding: 3rem 0;
+    }
+    
+    .hero--compact .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .timeline-content,
+    .team-area,
+    .research-card,
+    .community-item {
+        padding: 1.5rem;
+    }
+    
+    .research-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Improvements for Enhanced Vision Section */
+@media (max-width: 768px) {
+    .vision-pillars {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .pillar-card {
+        padding: 1.5rem;
+    }
+    
+    .pillar-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.75rem;
+    }
+    
+    .pillar-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .metric-number {
+        font-size: 2rem;
+    }
+    
+    .vision-roadmap h3 {
+        font-size: 1.7rem;
+    }
+    
+    .timeline-goals {
+        justify-content: center;
+    }
+    
+    .goal-tag {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pillar-card {
+        padding: 1.25rem;
+    }
+    
+    .pillar-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .pillar-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .metric-number {
+        font-size: 1.8rem;
+    }
+    
+    .vision-roadmap h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .tech-diagram,
+    .diagram-connections {
+        display: none;
+    }
+    
+    .timeline-item {
+        break-inside: avoid;
+        margin-bottom: 2rem;
+    }
+    
+    .research-card,
+    .team-area {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+}

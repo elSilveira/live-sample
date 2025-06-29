@@ -1,0 +1,316 @@
+/* Technologies Page Specific Styles */
+
+.tech-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+  margin-bottom: var(--space-xxl);
+}
+
+.search-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 12px;
+  border: 2px solid var(--color-neural-light);
+  background: var(--color-neural-medium);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: var(--space-sm) var(--space-lg);
+  border: 2px solid var(--color-neural-light);
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+/* Technology Cards */
+.tech-card {
+  background: var(--color-neural-medium);
+  border-radius: 16px;
+  padding: var(--space-xl);
+  border: 1px solid var(--color-neural-light);
+  transition: all var(--transition-medium);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.tech-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-neural-dark);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.tech-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-xs) 0;
+  line-height: 1.3;
+}
+
+.tech-card__subtitle {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.tech-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.tech-card__content > p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.problem-solution,
+.tech-features {
+  background: var(--color-neural-dark);
+  padding: var(--space-lg);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-primary);
+}
+
+.problem-solution h4,
+.tech-features h4 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-md) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.problem-solution ul,
+.tech-features ul {
+  margin: 0;
+  padding: 0 0 0 var(--space-lg);
+  list-style-type: disc;
+}
+
+.problem-solution li,
+.tech-features li {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+  line-height: 1.5;
+}
+
+.usage-example {
+  background: var(--color-neural-bg);
+  padding: var(--space-lg);
+  border-radius: 8px;
+  border: 1px solid var(--color-neural-light);
+}
+
+.usage-example h4 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-md) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.usage-example .code-block {
+  margin: 0;
+  background: var(--color-neural-medium);
+}
+
+.tech-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-neural-light);
+}
+
+/* Category sections */
+.tech-category {
+  transition: all var(--transition-medium);
+}
+
+.tech-category.hidden {
+  display: none;
+}
+
+/* Grid adjustments for tech cards */
+.grid--tech {
+  display: grid;
+  gap: var(--space-xl);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+/* Performance indicators */
+.performance-badge {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: var(--color-success);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Search highlighting */
+.highlight {
+  background: rgba(0, 102, 204, 0.3);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Loading states */
+.tech-card.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.tech-card.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-controls {
+    padding: 0 var(--space-md);
+  }
+  
+  .filter-container {
+    width: 100%;
+  }
+  
+  .filter-btn {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .grid--tech {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-card {
+    padding: var(--space-lg);
+  }
+  
+  .tech-card__header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .tech-icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-container {
+    flex-direction: column;
+  }
+  
+  .filter-btn {
+    width: 100%;
+  }
+  
+  .tech-card {
+    padding: var(--space-md);
+  }
+  
+  .tech-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .tech-card__title {
+    font-size: 1.25rem;
+  }
+  
+  .problem-solution,
+  .tech-features,
+  .usage-example {
+    padding: var(--space-md);
+  }
+}
