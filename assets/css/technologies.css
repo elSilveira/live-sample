@@ -69,6 +69,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .tech-card:hover {
@@ -102,6 +105,9 @@
   color: var(--text-primary);
   margin: 0 0 var(--space-xs) 0;
   line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .tech-card__subtitle {
@@ -110,6 +116,8 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .tech-card__content {
@@ -123,6 +131,9 @@
   color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .problem-solution,
@@ -156,6 +167,9 @@
   color: var(--text-secondary);
   margin-bottom: var(--space-xs);
   line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .usage-example {
@@ -163,6 +177,7 @@
   padding: var(--space-lg);
   border-radius: 8px;
   border: 1px solid var(--color-neural-light);
+  overflow: hidden;
 }
 
 .usage-example h4 {
@@ -173,6 +188,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .usage-example .code-block {
@@ -278,10 +295,20 @@
   .tech-card__header {
     flex-direction: column;
     text-align: center;
+    gap: var(--space-sm);
   }
   
   .tech-icon {
     align-self: center;
+  }
+  
+  .tech-card__title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  .tech-card__subtitle {
+    text-align: center;
   }
 }
 
@@ -305,12 +332,18 @@
   }
   
   .tech-card__title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   
   .problem-solution,
   .tech-features,
   .usage-example {
     padding: var(--space-md);
+  }
+  
+  .problem-solution h4,
+  .tech-features h4,
+  .usage-example h4 {
+    font-size: 0.9rem;
   }
 }
