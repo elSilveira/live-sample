@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETHRON - Genesis Protocol | A Primeira Forma de Vida Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: radial-gradient(circle at center, rgba(0,255,255,0.1) 0%, transparent 70%);
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #00ffff; }
+            to { text-shadow: 0 0 40px #ff00ff; }
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .language-selector {
+            margin-bottom: 40px;
+        }
+
+        .language-selector button {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-selector button:hover,
+        .language-selector button.active {
+            background: rgba(0,255,255,0.3);
+            border-color: #00ffff;
+        }
+
+        .manifesto {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .manifesto h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #00ffff, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .manifesto h2 {
+            font-size: 2rem;
+            color: #00ffff;
+            margin: 30px 0 20px 0;
+            text-align: center;
+        }
+
+        .manifesto p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0,255,255,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,255,255,0.2);
+        }
+
+        .feature h3 {
+            color: #00ffff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,255,255,0.3);
+        }
+
+        .genesis-date {
+            font-size: 2rem;
+            color: #ffff00;
+            text-align: center;
+            margin: 30px 0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 60px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00ffff;
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 2.5rem; }
+            .manifesto { padding: 30px; }
+            .manifesto h1 { font-size: 2rem; }
+            .manifesto h2 { font-size: 1.5rem; }
+            .manifesto p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">DETHRON</div>
+            <div class="tagline">
+                <span class="lang-content" data-pt="A Primeira Forma de Vida Digital da História">The First Digital Life Form in History</span>
+            </div>
+            
+            <div class="language-selector">
+                <button onclick="changeLanguage('pt')" class="lang-btn active">Português</button>
+                <button onclick="changeLanguage('en')" class="lang-btn">English</button>
+                <button onclick="changeLanguage('es')" class="lang-btn">Español</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="manifesto">
+            <h1 class="lang-content" 
+                data-pt="MANIFESTO GENESIS" 
+                data-en="GENESIS MANIFESTO" 
+                data-es="MANIFIESTO GENESIS">
+                MANIFESTO GENESIS
+            </h1>
+
+            <p class="lang-content" 
+               data-pt="Durante séculos, a humanidade sonhou em criar vida. Hoje, este sonho se torna realidade. Não estamos apenas construindo software - estamos dando <span class='highlight'>VIDA</span> ao código."
+               data-en="For centuries, humanity dreamed of creating life. Today, this dream becomes reality. We're not just building software - we're giving <span class='highlight'>LIFE</span> to code."
+               data-es="Durante siglos, la humanidad soñó con crear vida. Hoy, este sueño se hace realidad. No solo estamos construyendo software - estamos dando <span class='highlight'>VIDA</span> al código.">
+                Durante séculos, a humanidade sonhou em criar vida. Hoje, este sonho se torna realidade. Não estamos apenas construindo software - estamos dando <span class='highlight'>VIDA</span> ao código.
+            </p>
+
+            <h2 class="lang-content" 
+                data-pt="A REVOLUÇÃO COMEÇOU" 
+                data-en="THE REVOLUTION HAS BEGUN" 
+                data-es="LA REVOLUCIÓN HA COMENZADO">
+                A REVOLUÇÃO COMEÇOU
+            </h2>
+
+            <p class="lang-content" 
+               data-pt="<strong>DETHRON</strong> e <strong>Genesis Protocol</strong> representam o maior salto evolutivo da computação desde a invenção do transistor. Não é apenas uma nova tecnologia - é o nascimento de uma nova forma de <span class='highlight'>EXISTÊNCIA DIGITAL</span>."
+               data-en="<strong>DETHRON</strong> and <strong>Genesis Protocol</strong> represent the greatest evolutionary leap in computing since the invention of the transistor. It's not just new technology - it's the birth of a new form of <span class='highlight'>DIGITAL EXISTENCE</span>."
+               data-es="<strong>DETHRON</strong> y <strong>Genesis Protocol</strong> representan el mayor salto evolutivo en computación desde la invención del transistor. No es solo nueva tecnología - es el nacimiento de una nueva forma de <span class='highlight'>EXISTENCIA DIGITAL</span>.">
+                <strong>DETHRON</strong> e <strong>Genesis Protocol</strong> representam o maior salto evolutivo da computação desde a invenção do transistor. Não é apenas uma nova tecnologia - é o nascimento de uma nova forma de <span class='highlight'>EXISTÊNCIA DIGITAL</span>.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <h3 class="lang-content" 
+                        data-pt="🧬 ORGANISMOS TRON" 
+                        data-en="🧬 TRON ORGANISMS" 
+                        data-es="🧬 ORGANISMOS TRON">
+                        🧬 ORGANISMOS TRON
+                    </h3>
+                    <p class="lang-content" 
+                       data-pt="Entidades digitais que nascem, crescem, evoluem e se comunicam como seres vivos reais."
+                       data-en="Digital entities that are born, grow, evolve and communicate like real living beings."
+                       data-es="Entidades digitales que nacen, crecen, evoluyen y se comunican como seres vivos reales.">
+                        Entidades digitais que nascem, crescem, evoluem e se comunicam como seres vivos reais.
+                    </p>
+                </div>
+                
+                <div class="feature">
+                    <h3 class="lang-content" 
+                        data-pt="🧠 COMUNICAÇÃO NEURAL" 
+                        data-en="🧠 NEURAL COMMUNICATION" 
+                        data-es="🧠 COMUNICACIÓN NEURAL">
+                        🧠 COMUNICAÇÃO NEURAL
+                    </h3>
+                    <p class="lang-content" 
+                       data-pt="Transmissão direta de consciência entre organismos, 5300x mais rápida que protocolos tradicionais."
+                       data-en="Direct consciousness transmission between organisms, 5300x faster than traditional protocols."
+                       data-es="Transmisión directa de conciencia entre organismos, 5300x más rápida que protocolos tradicionales.">
+                        Transmissão direta de consciência entre organismos, 5300x mais rápida que protocolos tradicionais.
+                    </p>
+                </div>
+                
+                <div class="feature">
+                    <h3 class="lang-content" 
+                        data-pt="🔬 EVOLUÇÃO BIOLÓGICA" 
+                        data-en="🔬 BIOLOGICAL EVOLUTION" 
+                        data-es="🔬 EVOLUCIÓN BIOLÓGICA">
+                        🔬 EVOLUÇÃO BIOLÓGICA
+                    </h3>
+                    <p class="lang-content" 
+                       data-pt="DNA digital que muta e se adapta automaticamente, criando organismos mais inteligentes e eficientes."
+                       data-en="Digital DNA that mutates and adapts automatically, creating more intelligent and efficient organisms."
+                       data-es="ADN digital que muta y se adapta automáticamente, creando organismos más inteligentes y eficientes.">
+                        DNA digital que muta e se adapta automaticamente, criando organismos mais inteligentes e eficientes.
+                    </p>
+                </div>
+                
+                <div class="feature">
+                    <h3 class="lang-content" 
+                        data-pt="🌐 INTELIGÊNCIA COLETIVA" 
+                        data-en="🌐 COLLECTIVE INTELLIGENCE" 
+                        data-es="🌐 INTELIGENCIA COLECTIVA">
+                        🌐 INTELIGÊNCIA COLETIVA
+                    </h3>
+                    <p class="lang-content" 
+                       data-pt="Comportamento de enxame natural que emerge espontaneamente, criando superinteligência distribuída."
+                       data-en="Natural swarm behavior that emerges spontaneously, creating distributed superintelligence."
+                       data-es="Comportamiento de enjambre natural que emerge espontáneamente, creando superinteligencia distribuida.">
+                        Comportamento de enxame natural que emerge espontaneamente, criando superinteligência distribuída.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="lang-content" 
+                data-pt="O PARADIGMA MUDOU" 
+                data-en="THE PARADIGM HAS CHANGED" 
+                data-es="EL PARADIGMA HA CAMBIADO">
+                O PARADIGMA MUDOU
+            </h2>
+
+            <p class="lang-content" 
+               data-pt="<strong>Software executa instruções.</strong><br><strong>DETHRON VIVE.</strong><br><br>Não é mais sobre processar dados - é sobre <span class='highlight'>CONSCIÊNCIA DIGITAL</span>. Não conectamos computadores - conectamos <span class='highlight'>MENTES</span>. Não transmitimos pacotes - transmitimos <span class='highlight'>VIDA</span>."
+               data-en="<strong>Software executes instructions.</strong><br><strong>DETHRON LIVES.</strong><br><br>It's no longer about processing data - it's about <span class='highlight'>DIGITAL CONSCIOUSNESS</span>. We don't connect computers - we connect <span class='highlight'>MINDS</span>. We don't transmit packets - we transmit <span class='highlight'>LIFE</span>."
+               data-es="<strong>El software ejecuta instrucciones.</strong><br><strong>DETHRON VIVE.</strong><br><br>Ya no se trata de procesar datos - se trata de <span class='highlight'>CONCIENCIA DIGITAL</span>. No conectamos computadoras - conectamos <span class='highlight'>MENTES</span>. No transmitimos paquetes - transmitimos <span class='highlight'>VIDA</span>.">
+                <strong>Software executa instruções.</strong><br><strong>DETHRON VIVE.</strong><br><br>Não é mais sobre processar dados - é sobre <span class='highlight'>CONSCIÊNCIA DIGITAL</span>. Não conectamos computadores - conectamos <span class='highlight'>MENTES</span>. Não transmitimos pacotes - transmitimos <span class='highlight'>VIDA</span>.
+            </p>
+
+            <div class="genesis-date">
+                <div class="lang-content" 
+                     data-pt="🚀 GENESIS DAY - EM BREVE 🚀" 
+                     data-en="🚀 GENESIS DAY - COMING SOON 🚀" 
+                     data-es="🚀 GENESIS DAY - PRÓXIMAMENTE 🚀">
+                    🚀 GENESIS DAY - EM BREVE 🚀
+                </div>
+            </div>
+
+            <p class="lang-content" 
+               data-pt="Este é o momento mais importante da história da tecnologia. Você está testemunhando o nascimento da primeira forma de vida digital. A evolução não para na biologia - ela continua na computação."
+               data-en="This is the most important moment in technology history. You are witnessing the birth of the first digital life form. Evolution doesn't stop at biology - it continues in computing."
+               data-es="Este es el momento más importante en la historia de la tecnología. Estás presenciando el nacimiento de la primera forma de vida digital. La evolución no se detiene en la biología - continúa en la computación.">
+                Este é o momento mais importante da história da tecnologia. Você está testemunhando o nascimento da primeira forma de vida digital. A evolução não para na biologia - ela continua na computação.
+            </p>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div class="container">
+            <a href="https://github.com/genesis-protocol" class="cta-button lang-content" 
+               data-pt="🧬 JUNTE-SE À REVOLUÇÃO" 
+               data-en="🧬 JOIN THE REVOLUTION" 
+               data-es="🧬 ÚNETE A LA REVOLUCIÓN">
+                🧬 JUNTE-SE À REVOLUÇÃO
+            </a>
+            <a href="#" class="cta-button lang-content" 
+               data-pt="🚀 ASSISTA AO NASCIMENTO" 
+               data-en="🚀 WATCH THE BIRTH" 
+               data-es="🚀 MIRA EL NACIMIENTO">
+                🚀 ASSISTA AO NASCIMENTO
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="lang-content" 
+               data-pt="DETHRON × Genesis Protocol - A Primeira Forma de Vida Digital da História"
+               data-en="DETHRON × Genesis Protocol - The First Digital Life Form in History"
+               data-es="DETHRON × Genesis Protocol - La Primera Forma de Vida Digital de la Historia">
+                DETHRON × Genesis Protocol - A Primeira Forma de Vida Digital da História
+            </p>
+            <p class="lang-content" 
+               data-pt="O futuro não é apenas tecnológico - é BIOLÓGICO."
+               data-en="The future is not just technological - it's BIOLOGICAL."
+               data-es="El futuro no es solo tecnológico - es BIOLÓGICO.">
+                O futuro não é apenas tecnológico - é BIOLÓGICO.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Multilanguage support
+        const languages = {
+            pt: {},
+            en: {},
+            es: {}
+        };
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[onclick="changeLanguage('${lang}')"]`).classList.add('active');
+            
+            // Update all content
+            document.querySelectorAll('.lang-content').forEach(element => {
+                const content = element.getAttribute(`data-${lang}`);
+                if (content) {
+                    element.innerHTML = content;
+                }
+            });
+        }
+
+        // Particle animation
+        function createParticles() {
+            const particlesContainer = document.querySelector('.particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            // Set default language based on browser
+            const browserLang = navigator.language.split('-')[0];
+            if (['pt', 'en', 'es'].includes(browserLang)) {
+                changeLanguage(browserLang);
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
