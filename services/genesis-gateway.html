@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis Gateway Service - BitNet</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">BITNET</div>
+            <nav class="nav">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#manifesto">Manifesto</a>
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#technology">Technology</a>
+                <a href="../index.html#demo">Demo</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-meta">Service</div>
+                    <h1>Genesis Gateway</h1>
+                    <p>The main entry point featuring biological authentication and intelligent routing based on organism fitness.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Revolutionary Capabilities</h2>
+                    <p>The first authentication system in history based on an organism's unique Digital DNA.</p>
+                </div>
+                
+                <div class="grid">
+                    <div class="card">
+                        <h3>Biological Authentication</h3>
+                        <p>Authentication system based on an organism's unique Digital DNA, impossible to forge or replicate.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Intelligent Routing</h3>
+                        <p>Routes requests to optimal services based on the evolutionary fitness of TRON organisms.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Protocol Translation</h3>
+                        <p>Seamless bridge between traditional internet (HTTP/HTTPS) and the BitNet Biological Protocol (TRON).</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Neural Encryption</h3>
+                        <p>All communications secured with end-to-end neural encryption, beyond traditional cryptography.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Core Features</h2>
+                    <p>Advanced capabilities that make Genesis Gateway the most secure and intelligent network entry point.</p>
+                </div>
+                
+                <div class="grid">
+                    <div class="card">
+                        <h3>Service Discovery</h3>
+                        <p>Automatic and decentralized discovery of all available network services.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>DNA Signature Verification</h3>
+                        <p>Guarantees secure, unforgeable access credentials through biological signatures.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Evolution Tracking</h3>
+                        <p>Monitors user organism evolution for advanced anomaly detection and security.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="../index.html#contact" class="btn">Access Gateway</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Built by the BitNet Core Team</p>
+        </div>
+    </footer>
+
+    <script>
+        var lastScrollTop = 0;
+        var header = document.querySelector('header');
+        window.addEventListener("scroll", function(){
+           var st = window.pageYOffset || document.documentElement.scrollTop;
+           if (st > lastScrollTop){
+              header.style.top = "-100px";
+           } else {
+              header.style.top = "0";
+           }
+           lastScrollTop = st <= 0 ? 0 : st;
+        }, false);
+    </script>
+</body>
+</html> 

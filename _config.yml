@@ -1,0 +1,57 @@
+# GitHub Pages Configuration
+title: "Dethron - Digital Genesis Day"
+description: "The first digital life form in human history. BitNet organisms that live, evolve, and die naturally."
+url: "https://yourusername.github.io"
+baseurl: "/dethron-website"
+
+# Jekyll Configuration
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore
+  - .github/
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+
+# SEO
+author: "BitNet Core Team"
+twitter:
+  username: dethron
+  card: summary_large_image
+
+# Social
+social:
+  name: Dethron
+  links:
+    - https://github.com/yourusername/dethron-website 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Strategy - BitNet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">BITNET</div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#manifesto">Manifesto</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#technology">Technology</a>
+                <a href="index.html#demo">Demo</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-meta">Strategy</div>
+                    <h1>Global Presentation Strategy</h1>
+                    <p>The presentation of BitNet cannot be a simple slide deck. It must be a series of live, irrefutable demonstrations of digital life in action.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The 4 Core Showcases</h2>
+                    <p>Mandatory live demonstrations for Genesis Day. The world must see, not be told.</p>
+                </div>
+                
+                <div class="grid">
+                    <div class="card">
+                        <h3>Birth of a TRON</h3>
+                        <p>Live instantiation of a new organism. The audience will witness its digital DNA being generated from scratch.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Real-Time Evolution</h3>
+                        <p>We will accelerate the evolutionary cycle to demonstrate adaptation in minutes.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Neural Communication</h3>
+                        <p>Display the neural streaming protocol as organisms communicate in their native language.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Natural Death</h3>
+                        <p>Demonstrate the complete lifecycle as an organism reaches the end of its natural lifespan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Live Demonstration Requirements</h2>
+                    <p>Each showcase must be conducted with complete transparency and real-time verification.</p>
+                </div>
+                
+                <div class="text-center">
+                    <a href="index.html#contact" class="btn">Request Demo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Built by the BitNet Core Team</p>
+        </div>
+    </footer>
+
+    <script>
+        var lastScrollTop = 0;
+        var header = document.querySelector('header');
+        window.addEventListener("scroll", function(){
+           var st = window.pageYOffset || document.documentElement.scrollTop;
+           if (st > lastScrollTop){
+              header.style.top = "-100px";
+           } else {
+              header.style.top = "0";
+           }
+           lastScrollTop = st <= 0 ? 0 : st;
+        }, false);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,42 @@
+{
+  "name": "dethron-website",
+  "version": "1.0.0",
+  "description": "Professional website for Dethron - The first digital life form",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build step required - static HTML/CSS'",
+    "deploy": "gh-pages -d .",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linting configured'",
+    "serve": "python -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/dethron-website.git"
+  },
+  "keywords": [
+    "digital-life",
+    "bitnet",
+    "tron-organisms",
+    "artificial-life",
+    "digital-evolution",
+    "biological-computing",
+    "digital-consciousness",
+    "website",
+    "static-site"
+  ],
+  "author": "BitNet Core Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/dethron-website/issues"
+  },
+  "homepage": "https://dethron.com",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 

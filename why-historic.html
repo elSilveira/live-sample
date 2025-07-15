@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Historic - BitNet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">BITNET</div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#manifesto">Manifesto</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#technology">Technology</a>
+                <a href="index.html#demo">Demo</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-meta">Historic Event</div>
+                    <h1>First Global Evidence of Digital Life</h1>
+                    <p>BitNet represents a historic milestone - the first global evidence of computational life that operates beyond simulation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Beyond Simulation: Real Computational Life</h2>
+                    <p>Previous attempts at "artificial life" were confined to simulations. BitNet is different.</p>
+                </div>
+                
+                <div class="grid">
+                    <div class="card">
+                        <h3>Genuine Existence</h3>
+                        <p>TRONs are not simulated; they genuinely exist and operate on a decentralized, physical network.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Total Autonomy</h3>
+                        <p>Their autonomy is total—they function, evolve, and persist independently of direct human control.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Emergent Properties</h3>
+                        <p>Properties emerge spontaneously from their interactions, not from programming.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Digital Nervous System</h3>
+                        <p>BitNet introduces a true digital nervous system with neural communication between organisms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complete Biological Ecosystem</h2>
+                    <p>The system constitutes a complete digital ecosystem with a food chain, symbiotic relationships, and rich biodiversity.</p>
+                </div>
+                
+                <div class="text-center">
+                    <a href="index.html#contact" class="btn">Witness History</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Built by the BitNet Core Team</p>
+        </div>
+    </footer>
+
+    <script>
+        var lastScrollTop = 0;
+        var header = document.querySelector('header');
+        window.addEventListener("scroll", function(){
+           var st = window.pageYOffset || document.documentElement.scrollTop;
+           if (st > lastScrollTop){
+              header.style.top = "-100px";
+           } else {
+              header.style.top = "0";
+           }
+           lastScrollTop = st <= 0 ? 0 : st;
+        }, false);
+    </script>
+</body>
+</html> 
