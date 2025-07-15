@@ -172,6 +172,87 @@ header {
     letter-spacing: -0.02em;
 }
 
+/* Audio Section */
+.audio-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.audio-controls {
+    position: relative;
+}
+
+.audio-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-toggle:hover {
+    background: var(--surface-secondary);
+    color: var(--accent);
+}
+
+.audio-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.audio-player {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    background: var(--surface-primary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    z-index: 1001;
+}
+
+.audio-player.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.audio-player iframe {
+    border-radius: 8px;
+    width: 300px;
+    height: 120px;
+}
+
+/* Responsive adjustments for audio */
+@media (max-width: 768px) {
+    .audio-player {
+        left: -100px;
+        transform: none;
+        width: 280px;
+    }
+    
+    .audio-player.show {
+        transform: none;
+    }
+    
+    .audio-player iframe {
+        width: 280px;
+        height: 100px;
+    }
+}
+
 .nav {
     display: flex;
     gap: var(--space-lg);
@@ -633,4 +714,74 @@ footer p {
     color: var(--bg-secondary);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+} 
+
+/* Single Page Application Styles */
+.page-content {
+    display: none;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.page-content.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Navigation active state */
+.nav a.active {
+    color: var(--accent);
+}
+
+.nav a.active::after {
+    width: 100%;
+}
+
+/* Content sections */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-lg);
+}
+
+.content h3 {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.content ul {
+    padding-left: var(--space-lg);
+}
+
+.content li {
+    margin-bottom: var(--space-sm);
+}
+
+/* Contact section */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.contact-info h3,
+.cta-section h3 {
+    margin-bottom: var(--space-md);
+}
+
+.contact-info p,
+.cta-section p {
+    margin-bottom: var(--space-md);
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
 } 

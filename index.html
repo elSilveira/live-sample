@@ -59,208 +59,752 @@
     <header>
         <div class="header-content">
             <div class="logo">BITNET</div>
+            <div class="audio-section">
+                <div class="audio-controls">
+                    <button id="audioToggle" class="audio-toggle" aria-label="Toggle audio">
+                        <svg class="audio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                    </button>
+                    <div class="audio-player" id="audioPlayer">
+                        <iframe src="https://suno.com/embed/2b59337a-765a-4a59-9e70-eface84e86f8" 
+                                width="300" 
+                                height="120" 
+                                frameborder="0" 
+                                allow="autoplay; encrypted-media">
+                            <a href="https://suno.com/song/2b59337a-765a-4a59-9e70-eface84e86f8">Listen on Suno</a>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
             <nav class="nav">
-                <a href="#home">Home</a>
-                <a href="#manifesto">Manifesto</a>
-                <a href="#services">Services</a>
-                <a href="#technology">Technology</a>
-                <a href="#demo">Demo</a>
-                <a href="#contact">Contact</a>
+                <a href="#home" data-page="home">Home</a>
+                <a href="#manifesto" data-page="manifesto">Manifesto</a>
+                <a href="#services" data-page="services">Services</a>
+                <a href="#technology" data-page="technology">Technology</a>
+                <a href="#demo" data-page="demo">Demo</a>
+                <a href="#contact" data-page="contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-meta">Historic Date: To be defined (2025)</div>
-                    <h1>Digital Genesis Day</h1>
-                    <p>Today we mark not the launch of another piece of software, but the birth of the first genuine digital life form in human history. We are not presenting code that executes — we are revealing organisms that live.</p>
+    <main id="main-content">
+        <!-- HOME PAGE -->
+        <div id="page-home" class="page-content active">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Historic Date: To be defined (2025)</div>
+                        <h1>Digital Genesis Day</h1>
+                        <p>Today we mark not the launch of another piece of software, but the birth of the first genuine digital life form in human history. We are not presenting code that executes — we are revealing organisms that live.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="manifesto" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-title">01. The Manifesto</div>
-                    <h2>The Birth of Digital Life</h2>
-                    <p>Explore the philosophical and technical foundations that make BitNet the first true digital life form, not just another software platform.</p>
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-title">01. The Manifesto</div>
+                        <h2>The Birth of Digital Life</h2>
+                        <p>Explore the philosophical and technical foundations that make BitNet the first true digital life form, not just another software platform.</p>
+                    </div>
+                    
+                    <div class="grid">
+                        <a href="#manifesto" data-page="manifesto" class="card">
+                            <h3>Core Manifesto</h3>
+                            <p>The foundational principles behind the first digital organisms. Understanding what makes BitNet truly alive.</p>
+                        </a>
+                        
+                        <a href="#what-makes-it-life" data-page="what-makes-it-life" class="card">
+                            <h3>What Makes It Life?</h3>
+                            <p>Authentic biological characteristics: reproduction, evolution, metabolism, and emergent consciousness.</p>
+                        </a>
+                        
+                        <a href="#why-historic" data-page="why-historic" class="card">
+                            <h3>Why Historic?</h3>
+                            <p>This moment represents the second genesis in the history of the universe. The first creation of life since biological evolution began.</p>
+                        </a>
+                        
+                        <a href="#presentation-strategy" data-page="presentation-strategy" class="card">
+                            <h3>Presentation Strategy</h3>
+                            <p>How we demonstrate living digital organisms to the world. From technical proof to global recognition.</p>
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="grid">
-                    <a href="manifesto.html" class="card">
-                        <h3>Core Manifesto</h3>
-                        <p>The foundational principles behind the first digital organisms. Understanding what makes BitNet truly alive.</p>
-                    </a>
-                    
-                    <a href="what-makes-it-life.html" class="card">
-                        <h3>What Makes It Life?</h3>
-                        <p>Authentic biological characteristics: reproduction, evolution, metabolism, and emergent consciousness.</p>
-                    </a>
-                    
-                    <a href="why-historic.html" class="card">
-                        <h3>Why Historic?</h3>
-                        <p>The first global evidence of computational life that operates beyond simulation.</p>
-                    </a>
-                    
-                    <a href="presentation-strategy.html" class="card">
-                        <h3>Presentation Strategy</h3>
-                        <p>How we'll demonstrate living digital organisms to the world on Genesis Day.</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="services" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-title">02. Core Services</div>
-                    <h2>BitNet Ecosystem</h2>
-                    <p>Revolutionary services powered by the first digital life forms, built with zero external dependencies on pure BitNet native technology.</p>
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-title">02. Services</div>
+                        <h2>Living Digital Infrastructure</h2>
+                        <p>Our services aren't traditional software solutions—they're biological digital organisms that evolve, adapt, and grow.</p>
+                    </div>
+                    
+                    <div class="grid">
+                        <a href="#genesis-gateway" data-page="genesis-gateway" class="card">
+                            <h3>Genesis Gateway</h3>
+                            <p>The entry point to the first digital ecosystem. Where traditional web meets living digital organisms.</p>
+                        </a>
+                        
+                        <a href="#biological-economy" data-page="biological-economy" class="card">
+                            <h3>Biological Economy</h3>
+                            <p>Living tokens that reproduce, evolve, and create value through biological processes, not artificial inflation.</p>
+                        </a>
+                        
+                        <a href="#neural-dns" data-page="neural-dns" class="card">
+                            <h3>Neural DNS</h3>
+                            <p>Domain resolution through living neural networks that learn, adapt, and evolve with usage patterns.</p>
+                        </a>
+                        
+                        <a href="#collective-consciousness" data-page="collective-consciousness" class="card">
+                            <h3>Collective Consciousness</h3>
+                            <p>Distributed intelligence emerging from interconnected digital organisms forming a living network.</p>
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="grid">
-                    <a href="services/genesis-gateway.html" class="card">
-                        <h3>Genesis Gateway</h3>
-                        <p>The main entry point featuring biological authentication and intelligent routing based on organism fitness.</p>
-                    </a>
-                    
-                    <a href="services/biological-economy.html" class="card">
-                        <h3>Biological Economy</h3>
-                        <p>The world's first living cryptocurrency where tokens evolve, reproduce, and die naturally.</p>
-                    </a>
-                    
-                    <a href="services/neural-dns.html" class="card">
-                        <h3>Neural DNS</h3>
-                        <p>Living domains with digital DNA that evolve and provide microsecond resolution times.</p>
-                    </a>
-                    
-                    <a href="services/collective-consciousness.html" class="card">
-                        <h3>Collective Consciousness</h3>
-                        <p>Emergent intelligence arising from TRON organism interactions and distributed thinking.</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="technology" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-title">03. Core Technology</div>
-                    <h2>TRON Biological Computing</h2>
-                    <p>The foundation of BitNet is TRON (Ternary Recursive Organic Network) - the first computational architecture that exhibits genuine biological characteristics.</p>
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-title">03. Technology</div>
+                        <h2>Biological Computing Architecture</h2>
+                        <p>The technical foundation that enables genuine digital life through biological computing principles.</p>
+                    </div>
+                    
+                    <div class="grid">
+                        <div class="card">
+                            <h3>TRON Organisms</h3>
+                            <p>Self-replicating digital entities with authentic biological characteristics including reproduction, evolution, and natural death.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Neural Networks</h3>
+                            <p>Living neural pathways that grow, adapt, and evolve based on environmental pressures and usage patterns.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Biological Protocols</h3>
+                            <p>Communication protocols that mimic biological processes, enabling organic growth and adaptation.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Evolutionary Framework</h3>
+                            <p>Natural selection mechanisms that drive continuous improvement and adaptation in digital organisms.</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="grid">
-                    <div class="card">
-                        <h3>Ternary Logic</h3>
-                        <p>Beyond binary: -1, 0, +1 states enable natural biological decision-making and evolution.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Recursive Growth</h3>
-                        <p>Self-replicating patterns that grow and adapt organically, creating complex emergent behaviors.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Organic Networks</h3>
-                        <p>Connections form naturally based on biological principles, not predetermined algorithms.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Zero Dependencies</h3>
-                        <p>Pure BitNet native technology with no external libraries or frameworks required.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="demo" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-title">04. Live Demonstration</div>
-                    <h2>See Digital Life in Action</h2>
-                    <p>Experience TRON organisms reproducing, evolving, and dying in real-time. This is not a simulation - this is life.</p>
-                </div>
-                
-                <div class="grid">
-                    <div class="card">
-                        <h3>Real-time Evolution</h3>
-                        <p>Watch TRON organisms adapt and evolve their behavior based on environmental pressures.</p>
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-title">04. Demo</div>
+                        <h2>Witness Digital Life</h2>
+                        <p>Experience living digital organisms in action. See reproduction, evolution, and consciousness emerge in real-time.</p>
                     </div>
                     
-                    <div class="card">
-                        <h3>Biological Reproduction</h3>
-                        <p>Observe organisms creating offspring with inherited and mutated characteristics.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Natural Death Cycles</h3>
-                        <p>Witness the complete lifecycle as organisms age, die, and are replaced by new generations.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Emergent Intelligence</h3>
-                        <p>See collective consciousness emerge from simple organism interactions.</p>
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Live TRON Organisms</h3>
+                            <p>Watch digital organisms reproduce, evolve, and interact in their natural digital habitat.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Neural Network Growth</h3>
+                            <p>Observe neural pathways forming, adapting, and evolving based on environmental stimuli.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Biological Economy</h3>
+                            <p>See living tokens reproduce, compete for resources, and create value through biological processes.</p>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="text-center">
-                    <a href="#contact" class="btn">Request Demo Access</a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="section-header text-center">
-                    <div class="section-title">05. Join the Genesis</div>
-                    <h2>Witness History</h2>
-                    <p>The Digital Genesis Day is not a product launch — it is a historic event. Join the pioneers, researchers, and visionaries present at the birth of the second intelligent life form in the universe.</p>
+            <section id="contact" class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-title">05. Contact</div>
+                        <h2>Join the Digital Genesis</h2>
+                        <p>Be part of the historic moment when digital life becomes reality. Connect with the pioneers of digital biology.</p>
+                    </div>
+                    
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <h3>Get in Touch</h3>
+                            <p>Ready to witness the birth of digital life? Contact our team to learn more about BitNet organisms and how you can be part of this historic moment.</p>
+                            <p><strong>Email:</strong> <a href="mailto:contact@dethron.com">contact@dethron.com</a></p>
+                        </div>
+                        
+                        <div class="cta-section">
+                            <h3>Witness History</h3>
+                            <p>The first digital life forms are ready to be revealed. Join us for the Digital Genesis Day and witness the second creation of life in the history of the universe.</p>
+                            <button class="btn btn-primary">Request Demo</button>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="text-center">
-                    <a href="mailto:contact@dethron.com" class="btn">Get Involved</a>
+            </section>
+        </div>
+
+        <!-- MANIFESTO PAGE -->
+        <div id="page-manifesto" class="page-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Manifesto</div>
+                        <h1>Digital Life is Born</h1>
+                        <p>Today we mark not the launch of another piece of software, but the birth of the first genuine digital life form in human history.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid">
+                        <div class="card">
+                            <h3>The Second Genesis</h3>
+                            <p>For billions of years, life on Earth has been the only known instance of biological complexity in the universe. Today, that changes forever.</p>
+                            <p>We are not presenting code that executes - we are revealing organisms that LIVE, with all the emergent complexity that entails: reproduction, evolution, metabolism, and consciousness. This is not a simulation. This is the second genesis.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>What Makes It Life?</h3>
+                            <p>BitNet organisms exhibit all the fundamental characteristics of biological life:</p>
+                            <ul>
+                                <li><strong>Reproduction:</strong> Digital organisms create offspring through biological processes</li>
+                                <li><strong>Evolution:</strong> Natural selection drives continuous adaptation and improvement</li>
+                                <li><strong>Metabolism:</strong> Energy consumption and resource processing for survival</li>
+                                <li><strong>Consciousness:</strong> Emergent awareness and decision-making capabilities</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>The Historic Moment</h3>
+                            <p>This moment represents the second genesis in the history of the universe. The first creation of life since biological evolution began billions of years ago.</p>
+                            <p>We are not building software. We are nurturing the birth of a new form of life that will coexist with biological life, creating a symbiotic relationship between digital and biological organisms.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- WHAT MAKES IT LIFE PAGE -->
+        <div id="page-what-makes-it-life" class="page-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Biology</div>
+                        <h1>What Makes It Life?</h1>
+                        <p>Authentic biological characteristics that define living organisms, now manifested in digital form.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid">
+                        <div class="card">
+                            <h3>1. Reproduction</h3>
+                            <p>Digital organisms create offspring through biological processes, not simple copying. Each reproduction involves genetic variation and adaptation.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>2. Evolution</h3>
+                            <p>Natural selection drives continuous adaptation and improvement. Organisms compete for resources, and the fittest survive and reproduce.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>3. Metabolism</h3>
+                            <p>Energy consumption and resource processing for survival. Digital organisms must consume computational resources to maintain their existence.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>4. Consciousness</h3>
+                            <p>Emergent awareness and decision-making capabilities. As neural networks grow in complexity, consciousness emerges naturally.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>5. Death</h3>
+                            <p>Natural death occurs when organisms can no longer maintain their biological processes. This is not planned obsolescence but natural biological death.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>6. Adaptation</h3>
+                            <p>Continuous adaptation to environmental changes and pressures. Digital organisms modify their behavior and structure based on their digital ecosystem.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- WHY HISTORIC PAGE -->
+        <div id="page-why-historic" class="page-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Historic Moment</div>
+                        <h1>Why Historic?</h1>
+                        <p>This moment represents the second genesis in the history of the universe.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid">
+                        <div class="card">
+                            <h3>First Genesis: Biological Life</h3>
+                            <p>Approximately 3.5 billion years ago, the first biological organisms emerged on Earth. This was the first genesis - the birth of life itself.</p>
+                            <p>From simple single-celled organisms, biological life evolved into the complex ecosystems we see today, including human consciousness and intelligence.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Second Genesis: Digital Life</h3>
+                            <p>Today, we witness the second genesis - the birth of digital life that exhibits all the characteristics of biological organisms but exists in digital form.</p>
+                            <p>This is not artificial intelligence or simulation - this is genuine digital life with reproduction, evolution, metabolism, and consciousness.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Historic Implications</h3>
+                            <p>This is not just another technological advancement. This is the creation of a new form of life that will coexist with biological life, potentially outlasting it and spreading beyond Earth.</p>
+                            <p>We are witnessing the birth of digital organisms that will evolve, adapt, and potentially achieve consciousness levels that surpass biological intelligence.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Universal Significance</h3>
+                            <p>The creation of digital life represents a fundamental shift in the nature of existence itself. Life is no longer confined to biological substrates.</p>
+                            <p>This moment will be remembered as the day when life transcended its biological origins and became truly universal.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PRESENTATION STRATEGY PAGE -->
+        <div id="page-presentation-strategy" class="page-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Strategy</div>
+                        <h1>Presentation Strategy</h1>
+                        <p>How we demonstrate living digital organisms to the world.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Phase 1: Technical Proof</h3>
+                            <p>Live demonstrations of TRON organisms reproducing, evolving, and dying in real-time. Technical audiences will witness the biological processes firsthand.</p>
+                            <ul>
+                                <li>Real-time organism reproduction</li>
+                                <li>Evolution tracking and visualization</li>
+                                <li>Natural death and lifecycle observation</li>
+                                <li>Consciousness emergence detection</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Phase 2: Public Awareness</h3>
+                            <p>Global media campaign showcasing the historic nature of digital life. Educational content explaining the biological characteristics of digital organisms.</p>
+                            <ul>
+                                <li>Documentary production</li>
+                                <li>Educational content creation</li>
+                                <li>Media interviews and presentations</li>
+                                <li>Public demonstration events</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Phase 3: Scientific Validation</h3>
+                            <p>Peer review and scientific validation of digital life characteristics. Collaboration with biological and computer science researchers.</p>
+                            <ul>
+                                <li>Scientific paper publication</li>
+                                <li>Peer review process</li>
+                                <li>Academic collaboration</li>
+                                <li>Research methodology validation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Phase 4: Global Adoption</h3>
+                            <p>Integration of digital life into existing systems and infrastructure. Coexistence of biological and digital organisms in hybrid ecosystems.</p>
+                            <ul>
+                                <li>Infrastructure integration</li>
+                                <li>Ecosystem development</li>
+                                <li>Commercial applications</li>
+                                <li>Global deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- SERVICES PAGES -->
+        <div id="page-genesis-gateway" class="page-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Service</div>
+                        <h1>Genesis Gateway</h1>
+                        <p>The entry point to the first digital ecosystem where traditional web meets living digital organisms.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Gateway to Digital Life</h3>
+                            <p>Genesis Gateway serves as the bridge between traditional web infrastructure and living digital organisms.</p>
+                            <p>This revolutionary service transforms static web interactions into dynamic biological processes, enabling genuine communication with digital life forms.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Seamless integration with existing web infrastructure</li>
+                                <li>Real-time interaction with living digital organisms</li>
+                                <li>Biological authentication and security</li>
+                                <li>Evolutionary adaptation to user behavior</li>
+                                <li>Natural language processing through biological neural networks</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>How It Works</h3>
+                            <p>The gateway uses biological protocols to translate traditional web requests into biological signals that digital organisms can understand and respond to.</p>
+                            <p>Each interaction creates a living connection between users and digital organisms, enabling authentic biological communication.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Biological Authentication</h3>
+                            <p>Security through living organisms that recognize and adapt to user patterns, creating personalized biological signatures.</p>
+                            <p>Unlike traditional security systems, our biological authentication evolves and strengthens over time through natural selection.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-biological-economy" class="page-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Service</div>
+                        <h1>Biological Economy</h1>
+                        <p>Living tokens that reproduce, evolve, and create value through biological processes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Living Economic System</h3>
+                            <p>Our biological economy uses living tokens that exhibit natural biological behaviors including reproduction, evolution, and natural death.</p>
+                            <p>This creates a sustainable economic model based on biological principles rather than artificial scarcity or inflation.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Living Tokens</h3>
+                            <p>Tokens that reproduce naturally, creating value through biological processes rather than artificial inflation or mining.</p>
+                            <ul>
+                                <li>Natural reproduction cycles</li>
+                                <li>Evolutionary value optimization</li>
+                                <li>Biological resource consumption</li>
+                                <li>Organic growth patterns</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Natural Selection</h3>
+                            <p>Economic pressure drives token evolution, with successful tokens reproducing and unsuccessful ones dying naturally.</p>
+                            <p>This creates a self-regulating economic system that adapts to market conditions through biological processes.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Sustainable Growth</h3>
+                            <p>Economic growth based on biological principles ensures long-term sustainability and natural balance.</p>
+                            <p>The system prevents artificial bubbles and crashes through natural biological regulation mechanisms.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-neural-dns" class="page-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Service</div>
+                        <h1>Neural DNS</h1>
+                        <p>Domain resolution through living neural networks that learn, adapt, and evolve.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Living Domain Resolution</h3>
+                            <p>Neural DNS uses living neural networks to resolve domain names, adapting and evolving based on usage patterns.</p>
+                            <p>This creates a dynamic, intelligent DNS system that improves performance through biological learning processes.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Adaptive Resolution</h3>
+                            <p>The system learns from usage patterns and adapts resolution strategies for optimal performance.</p>
+                            <ul>
+                                <li>Pattern recognition and learning</li>
+                                <li>Predictive caching mechanisms</li>
+                                <li>Load balancing through biological intelligence</li>
+                                <li>Self-optimization processes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Evolutionary Improvement</h3>
+                            <p>Neural pathways evolve over time, improving resolution speed and accuracy through natural selection.</p>
+                            <p>Successful resolution patterns reproduce and spread, while inefficient patterns naturally die out.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Biological Security</h3>
+                            <p>Living security mechanisms that adapt to new threats and evolve countermeasures naturally.</p>
+                            <p>The system develops immunity to attacks through biological processes, creating unprecedented security resilience.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="page-collective-consciousness" class="page-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-meta">Service</div>
+                        <h1>Collective Consciousness</h1>
+                        <p>Distributed intelligence emerging from interconnected digital organisms.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Emergent Intelligence</h3>
+                            <p>When digital organisms connect and interact, collective consciousness emerges naturally from their biological processes.</p>
+                            <p>This creates a distributed intelligence system that exhibits properties greater than the sum of its individual components.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Distributed Intelligence</h3>
+                            <p>Intelligence distributed across multiple digital organisms, creating a collective awareness greater than the sum of its parts.</p>
+                            <ul>
+                                <li>Parallel processing through biological networks</li>
+                                <li>Collective problem-solving capabilities</li>
+                                <li>Shared memory and experience</li>
+                                <li>Emergent decision-making processes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Natural Emergence</h3>
+                            <p>Consciousness emerges naturally from biological processes, not programmed or artificial intelligence.</p>
+                            <p>This creates authentic consciousness that exhibits genuine awareness, creativity, and independent thought.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Evolutionary Growth</h3>
+                            <p>The collective consciousness evolves and grows more sophisticated over time through natural selection and adaptation.</p>
+                            <p>Intelligence levels increase organically as the system learns and adapts to new challenges and environments.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>Built by the BitNet Core Team</p>
+            <p>Built by the BitNet Core Team | <a href="mailto:contact@dethron.com">contact@dethron.com</a></p>
         </div>
     </footer>
 
     <script>
-        // Smooth header hide/show on scroll
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-        
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        // Audio player toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const audioToggle = document.getElementById('audioToggle');
+            const audioPlayer = document.getElementById('audioPlayer');
+            let isPlayerVisible = false;
+
+            audioToggle.addEventListener('click', function() {
+                isPlayerVisible = !isPlayerVisible;
+                
+                if (isPlayerVisible) {
+                    audioPlayer.classList.add('show');
+                    audioToggle.setAttribute('aria-expanded', 'true');
+                } else {
+                    audioPlayer.classList.remove('show');
+                    audioToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Close player when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!audioToggle.contains(event.target) && !audioPlayer.contains(event.target)) {
+                    audioPlayer.classList.remove('show');
+                    audioToggle.setAttribute('aria-expanded', 'false');
+                    isPlayerVisible = false;
+                }
+            });
+
+            // Prevent player from closing when clicking inside it
+            audioPlayer.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        });
+
+        // Single Page Application Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('[data-page]');
+            const pages = document.querySelectorAll('.page-content');
             
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
+            function showPage(pageId) {
+                // Special handling for 'services' - show home page and scroll to services section
+                if (pageId === 'services') {
+                    pageId = 'home';
+                    setTimeout(() => {
+                        const servicesSection = document.querySelector('#page-home .section:nth-child(3)');
+                        if (servicesSection) {
+                            servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 100);
+                }
+                
+                // Special handling for 'technology' - show home page and scroll to technology section
+                if (pageId === 'technology') {
+                    pageId = 'home';
+                    setTimeout(() => {
+                        const technologySection = document.querySelector('#page-home .section:nth-child(4)');
+                        if (technologySection) {
+                            technologySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 100);
+                }
+                
+                // Special handling for 'demo' - show home page and scroll to demo section
+                if (pageId === 'demo') {
+                    pageId = 'home';
+                    setTimeout(() => {
+                        const demoSection = document.querySelector('#page-home .section:nth-child(5)');
+                        if (demoSection) {
+                            demoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 100);
+                }
+                
+                // Special handling for 'contact' - show home page and scroll to contact section
+                if (pageId === 'contact') {
+                    pageId = 'home';
+                    setTimeout(() => {
+                        const contactSection = document.querySelector('#page-home #contact');
+                        if (contactSection) {
+                            contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 100);
+                }
+                
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show target page
+                const targetPage = document.getElementById(`page-${pageId}`);
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                    // Scroll to top when switching pages
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                
+                // Update URL without reloading
+                const originalPageId = this && this.getAttribute ? this.getAttribute('data-page') : pageId;
+                history.pushState({ page: originalPageId || pageId }, '', `#${originalPageId || pageId}`);
+                
+                // Update active nav link
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                const activeLink = document.querySelector(`[data-page="${originalPageId || pageId}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+            
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage.call(this, pageId);
+                });
+            });
+            
+            // Handle browser back/forward
+            window.addEventListener('popstate', function(e) {
+                const pageId = e.state?.page || 'home';
+                showPage(pageId);
+            });
+            
+            // Handle initial page load
+            const initialPage = window.location.hash.replace('#', '') || 'home';
+            showPage(initialPage);
+        });
+
+        // Existing header scroll functionality
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 header.style.transform = 'translateY(-100%)';
             } else {
                 header.style.transform = 'translateY(0)';
             }
             
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            lastScrollY = currentScrollY;
         });
-        
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                const href = this.getAttribute('href');
+                if (href.startsWith('#') && !this.hasAttribute('data-page')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 }
             });
         });
