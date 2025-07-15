@@ -7,49 +7,79 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dethron.com/manifesto.html</loc>
+    <loc>https://dethron.com/#home</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dethron.com/#manifesto</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dethron.com/#what-makes-it-life</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dethron.com/what-makes-it-life.html</loc>
+    <loc>https://dethron.com/#why-historic</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dethron.com/why-historic.html</loc>
+    <loc>https://dethron.com/#presentation-strategy</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dethron.com/presentation-strategy.html</loc>
+    <loc>https://dethron.com/#genesis-gateway</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dethron.com/services/genesis-gateway.html</loc>
+    <loc>https://dethron.com/#biological-economy</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dethron.com/services/biological-economy.html</loc>
+    <loc>https://dethron.com/#neural-dns</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dethron.com/services/neural-dns.html</loc>
+    <loc>https://dethron.com/#collective-consciousness</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dethron.com/services/collective-consciousness.html</loc>
+    <loc>https://dethron.com/#services</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dethron.com/#technology</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dethron.com/#demo</loc>
+    <lastmod>2025-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dethron.com/#contact</loc>
     <lastmod>2025-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
